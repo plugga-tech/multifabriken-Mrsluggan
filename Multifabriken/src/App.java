@@ -7,15 +7,16 @@ public class App {
 
     public static void chooseProduct() {
 
-        //
+    
         String choice = "";
         Scanner scanner = new Scanner(System.in);
 
         // Förklarar visuellt vad det handlar om + Vilka val man får
         System.out.println(
                 "Hej! Välkommen till Multifabriken! Välj vad du vill beställa!\n" + "--------------------------");
-        System.out.print("1. Bilar \n2. Godis \n3. Rör \n4. Havremjölk\n" + "--------------------------"
-                + "\nSkriv in vilken och klicka sedan enter: ");
+        System.out.print(
+                "1. Bilar \n2. Godis \n3. Rör \n4. Havremjölk\n5. Kolla varukorgen\n" + "--------------------------"
+                        + "\nSkriv in vilken och klicka sedan enter: ");
         choice = scanner.nextLine();
 
         // Switch statment, så man kan välja vilken man vill köpa
@@ -43,10 +44,23 @@ public class App {
                 // Lägger till nya bilen i inköpslistan
                 listOfItems.add(newOatmilk);
                 break;
+
+            case "5":
+                printList();
+                break;
             default:
                 System.out.println("Ogiltigt svar, försök igen.");
                 break;
         }
+
+    }
+
+    public static void printList() {
+        System.out.println("\nDet du har i varukorgen är:");
+        for (Object item : listOfItems) {
+            System.out.println(item);
+        }
+        System.out.println("\n--------------------------\n");
 
     }
 

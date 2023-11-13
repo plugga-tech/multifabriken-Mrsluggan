@@ -29,6 +29,11 @@ public class Car {
 
     }
 
+    @Override
+    public String toString() {
+        return "Bil: { " + registrationNumber + " " + color + " " + model + " }";
+    }
+
     public String getRegistrationNumber() {
         return registrationNumber;
     }
