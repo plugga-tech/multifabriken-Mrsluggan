@@ -26,6 +26,11 @@ public class Oatmilk {
 
     }
 
+    @Override
+    public String toString() {
+        return "Havremjölk: { " + fatContent + " %" + "  " + LiterQuantity + " }";
+    }
+
     public int getFatContent() {
         return fatContent;
     }

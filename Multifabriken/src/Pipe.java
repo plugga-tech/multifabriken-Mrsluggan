@@ -26,6 +26,11 @@ public class Pipe {
 
     }
 
+    @Override
+    public String toString() {
+        return "Rör: { " + diameter + " mm" + "  " + length + " mm" + " }";
+    }
+
     public double getDiameter() {
         return diameter;
     }

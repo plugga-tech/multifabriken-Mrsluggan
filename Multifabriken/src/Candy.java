@@ -26,6 +26,12 @@ public class Candy {
 
     }
 
+    @Override
+    public String toString() {
+        return "Godis: { " + taste + " " + amount + " Kg "+ " }";
+    }
+
+
     public String getTaste() {
         return taste;
     }
