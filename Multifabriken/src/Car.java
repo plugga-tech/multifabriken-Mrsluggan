@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Car {
 
-    private  String registrationNumber;
-    private  String color;
-    private  String model;
+    private String registrationNumber;
+    private String color;
+    private String model;
 
     public Car(String registrationNumber, String color, String model) {
 

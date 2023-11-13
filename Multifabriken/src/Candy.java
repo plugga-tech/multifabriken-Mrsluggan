@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Candy {
 
     private String taste;
@@ -7,6 +9,21 @@ public class Candy {
 
         this.taste = taste;
         this.amount = amount;
+
+    }
+
+        public static Candy newCandy() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hej! Fyll i vilken smak du vill ha och hur mycket du vill köpa");
+
+        System.out.print("Smak: ");
+        String taste = scanner.nextLine();
+        System.out.print("Hur många kg: ");
+        int amount = scanner.nextInt();
+
+
+        return new Candy(taste, amount);
 
     }
 

@@ -3,27 +3,39 @@ import java.util.Scanner;
 
 public class App {
 
-    static ArrayList<Object> listOfItems = new ArrayList<>();
+    public static ArrayList<Object> listOfItems = new ArrayList<>();
 
     public static void chooseProduct() {
 
+        //
         String choice = "";
         Scanner scanner = new Scanner(System.in);
 
-        //Förklarar visuellt vad det handlar om + Vilka val man får
+        // Förklarar visuellt vad det handlar om + Vilka val man får
         System.out.println(
                 "Hej! Välkommen till Multifabriken! Välj vad du vill beställa!\n" + "--------------------------");
         System.out.print("1. Bilar \n2. Godis \n3. Rör \n4. Havremjölk\n" + "--------------------------"
                 + "\nSkriv in vilken och klicka sedan enter: ");
         choice = scanner.nextLine();
 
+        // Switch statment, så man kan välja vilken man vill köpa
         switch (choice) {
             case "1":
-                Car myCar = Car.newCar();
-                listOfItems.add(myCar);
-                System.out.println(listOfItems.toString());
+                // Skapar ett objekt från klassen
+                Car newCar = Car.newCar();
+                // Lägger till nya bilen i inköpslistan
+                listOfItems.add(newCar);
                 break;
-
+            case "2":
+                Candy newCandy = Candy.newCandy();
+                listOfItems.add(newCandy);
+                break;
+            case "3":
+                // Skapar ett objekt från klassen
+                Candy newCandy = Candy.newCandy();
+                // Lägger till nya bilen i inköpslistan
+                listOfItems.add(newCandy);
+                break;
             default:
                 System.out.println("bajs");
                 break;
