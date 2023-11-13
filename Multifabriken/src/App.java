@@ -32,12 +32,19 @@ public class App {
                 break;
             case "3":
                 // Skapar ett objekt från klassen
-                Candy newCandy = Candy.newCandy();
+                Pipe newPipe = Pipe.newPipe();
                 // Lägger till nya bilen i inköpslistan
-                listOfItems.add(newCandy);
+                listOfItems.add(newPipe);
+                break;
+
+            case "4":
+                // Skapar ett objekt från klassen
+                Oatmilk newOatmilk = Oatmilk.newOatmilk();
+                // Lägger till nya bilen i inköpslistan
+                listOfItems.add(newOatmilk);
                 break;
             default:
-                System.out.println("bajs");
+                System.out.println("Ogiltigt svar, försök igen.");
                 break;
         }
 

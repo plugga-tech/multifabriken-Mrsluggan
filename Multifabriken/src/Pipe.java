@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Pipe {
 
     private double diameter;
@@ -7,6 +9,20 @@ public class Pipe {
 
         this.diameter = diameter;
         this.length = length;
+
+    }
+
+    public static Pipe newPipe() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hej! Fyll i vilken Diameter och längd röret ska ha");
+
+        System.out.print("Diameter: ");
+        double diameter = scanner.nextDouble();
+        System.out.print("Längd: ");
+        double length = scanner.nextDouble();
+
+        return new Pipe(diameter, length);
 
     }
 

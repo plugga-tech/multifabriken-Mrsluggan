@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Oatmilk {
 
     private int fatContent;
@@ -7,6 +9,20 @@ public class Oatmilk {
 
         this.fatContent = fatContent;
         this.LiterQuantity = LiterQuantity;
+
+    }
+
+    public static Oatmilk newOatmilk() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hej! Fyll i vilken fetthalt samt hur många liter du vill köpa.");
+
+        System.out.print("Fethalt i %: ");
+        int fatContent = scanner.nextInt();
+        System.out.print("Hur många liter: ");
+        int LiterQuantity = scanner.nextInt();
+
+        return new Oatmilk(fatContent, LiterQuantity);
 
     }
 

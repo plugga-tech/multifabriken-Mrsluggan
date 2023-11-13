@@ -22,7 +22,6 @@ public class Candy {
         System.out.print("Hur många kg: ");
         int amount = scanner.nextInt();
 
-
         return new Candy(taste, amount);
 
     }
