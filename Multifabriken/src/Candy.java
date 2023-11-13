@@ -1,5 +1,5 @@
 public class Candy {
-    
+
     private String taste;
     private int amount;
 
@@ -10,8 +10,20 @@ public class Candy {
 
     }
 
+    public String getTaste() {
+        return taste;
+    }
 
+    public void setTaste(String taste) {
+        this.taste = taste;
+    }
 
+    public int getAmount() {
+        return amount;
+    }
 
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 
 }
